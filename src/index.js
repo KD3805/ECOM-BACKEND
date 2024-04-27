@@ -1,10 +1,17 @@
 const express = require('express');
 const cors = require('cors');
+const corsConfig = {
+    origin: "*",
+    credential: true,
+    methods: ["GET", "PUT", "POST", "DELETE"],  // optionally specify which methods are allowed
+};
 
-const app = express();
+const app = express();  
 
+app.use(cors(corsConfig));  
+app.options("", cors(corsConfig)); 
 app.use(express.json());
-app.use(cors());
+
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Internal Server Error');

@@ -67,16 +67,6 @@ const getUserProfileByToken = async (token) => {
         }
         return user;
 
-        // if (exp < now) {
-        //     throw new Error('The token has expired!', 401);
-        // } else {
-        //     const user = await findUserById(userId);
-
-        //     if (!user) {
-        //         throw new Error("User not found with id: " + userId);
-        //     }
-        //     return user;
-        // }
     } catch (error) {
         throw new Error(error.message);
     }
