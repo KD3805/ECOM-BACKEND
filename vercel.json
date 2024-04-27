@@ -10,7 +10,7 @@
         {
             "src": "/(.*)",
             "dest": "src/server.js",
-            "methos": [
+            "methods": [
                 "GET",
                 "PUT",
                 "POST",
