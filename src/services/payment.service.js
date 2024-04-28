@@ -21,7 +21,7 @@ const createPaymentLink = async(orderId) => {
             },
             reminder_enable: true,
             // callback_url: `http://localhost:3000/payment/${orderId}`,
-            callback_url: `http://localhost:3000/user-details/?layout=2`,
+            callback_url: `https://gayatri-tan.vercel.app/user-details/?layout=2`,
             callback_method: 'get',
 
         };
